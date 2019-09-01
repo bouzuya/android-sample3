@@ -26,6 +26,11 @@
             android:layout_height="wrap_content"
             android:text="@{viewModel.userCount}" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:userList="@{viewModel.userList}" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,6 +50,5 @@
             android:layout_height="wrap_content"
             android:onClick="@{(v) -> viewModel.deleteAll()}"
             android:text="@string/home_delete_all_button_label" />
-
     </LinearLayout>
 </layout>
