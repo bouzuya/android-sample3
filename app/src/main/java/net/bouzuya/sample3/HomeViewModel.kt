@@ -24,6 +24,8 @@ class HomeViewModel(private val _userRepository: UserRepository) : ViewModel() {
         val user = User(0, name)
         _userRepository.insert(user)
 
+        _nameText.value = ""
+
         _userList.value = _userRepository.findAll()
     }
 
