@@ -4,8 +4,6 @@ import androidx.lifecycle.*
 import kotlinx.coroutines.launch
 
 class HomeViewModel(private val _userRepository: UserRepository) : ViewModel() {
-    val name = "Home"
-
     private val _nameText = MutableLiveData<String>()
 
     private val _userList = MutableLiveData<List<User>>()
