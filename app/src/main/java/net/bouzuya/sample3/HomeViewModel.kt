@@ -11,7 +11,7 @@ class HomeViewModel(private val _userRepository: UserRepository) : ViewModel() {
     private val _userList = MutableLiveData<List<User>>()
     val userList: LiveData<List<User>> = _userList
 
-    val userCount: LiveData<Int> = Transformations.map(_userList) { it.size }
+    val userCount: LiveData<String> = Transformations.map(_userList) { (it?.size ?: 0).toString() }
 
     init {
         viewModelScope.launch {
